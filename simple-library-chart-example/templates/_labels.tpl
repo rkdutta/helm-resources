@@ -1,7 +1,5 @@
-{{- define "simple-library-chart-example.labels" -}}​
-{{- if .Chart.AppVersion }}​
-app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}​
-{{- end }}​
-app.kubernetes.io/managed-by: {{ .Release.Service }}​
-app.kubernetes.io/instance: {{ .Release.Name }}​
-{{- end }} 
+{{- define "commonlib.labels" }}
+app.kubernetes.io/version: {{ .Chart.AppVersion }}​
+app.kubernetes.io/managed-by: {{ .Release.Service | quote }}
+app.kubernetes.io/version: {{ .Chart.AppVersion | quote }}
+{{- end }}
