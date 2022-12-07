@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: {{ .Release.Name }}-sample-app
+  name: {{ .Release.Name }}-sample-app
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: {{ .Release.Name }}-sample-app
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: {{ .Release.Name }}-sample-app
+    spec:
+      serviceAccountName: {{ .Release.Name }}-{{ .Values.serviceAccount.name }}
+      containers:
+      - image: {{ required "Image name is required" .Values.image.name }}:{{ .Values.image.tag | default "latest" }}
+        name: nginx
+        imagePullPolicy: Always
+        ports:
+        - containerPort: {{ .Values.image.port | default 8080 }}
+        resources: {}
+status: {}

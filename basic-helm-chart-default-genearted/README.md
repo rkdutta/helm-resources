@@ -1,0 +1,1 @@
+## This is default chart example generated when a chart is created using "helm create mychart" command
