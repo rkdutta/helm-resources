@@ -4,7 +4,6 @@
 
 ### Commands
 ```
-helm upgrade --install test-hook-example simple-helm-test-hook-example --dry-run --debug
-helm upgrade --install test-hook-example simple-helm-test-hook-example
-helm test test-hook-example
+helm upgrade --install hook-example simple-helm-hook-example --dry-run --debug
+helm upgrade --install hook-example simple-helm-hook-example
 ```

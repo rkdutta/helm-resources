@@ -1,0 +1,6 @@
+dependencies:
+- name: library-chart
+  repository: file://../simple-library-chart-example
+  version: 0.1.0
+digest: sha256:72c14d3cf5dae1226db7a5c96140c55f921ed579f6e1ed5a891b3f08f4ecdf87
+generated: "2022-12-07T20:07:20.710233+01:00"
