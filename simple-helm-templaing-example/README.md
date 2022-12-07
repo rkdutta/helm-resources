@@ -2,3 +2,10 @@
 1. Simple helm templating
 2. Parameterizing the values using values.yaml
 3. Parameterizing labels and annotations using values.yaml
+
+
+### Commands
+```
+helm upgrade --install simple-templating-example simple-helm-templaing-example --dry-run --debug
+helm upgrade --install simple-templating-example simple-helm-templaing-example
+```
