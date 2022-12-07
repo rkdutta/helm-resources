@@ -5,10 +5,11 @@
 replicaCount: 1
 
 image:
-  name: nginx
+  repository: nginx
   # Overrides the image tag whose default is the chart appVersion.
   tag: latest
   port: 80
+  pullPolicy: Always
 
 serviceAccount:
   # Specifies whether a service account should be created
